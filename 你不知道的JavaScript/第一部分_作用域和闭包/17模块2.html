@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var foo = (function CoolModule(id) {
+				function change() {
+					publicAPI.identify = identify2;
+				}
+
+				function identify1() {
+					console.log(id);
+				}
+
+				function identify2() {
+					console.log(id.toUpperCase());
+				}
+				var publicAPI = {
+					change: change,
+					identify: identify1
+				};
+				return publicAPI;
+			})('foo module');
+			foo.identify();
+			foo.change();
+			foo.identify();
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

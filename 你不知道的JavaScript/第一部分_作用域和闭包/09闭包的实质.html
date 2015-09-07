@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function foo() {
+				var a = 3;
+
+				function bar() {
+					console.log(a);
+				}
+				return bar;
+			}
+			var bar = foo();
+			bar();
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

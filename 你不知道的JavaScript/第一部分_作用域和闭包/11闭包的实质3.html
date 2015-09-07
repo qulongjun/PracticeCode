@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var fn; //全局变量
+			function foo() {
+				var a = 2;
+
+				function baz() { //内部函数
+					console.log(a);
+				}
+				fn = baz; //将baz传递给全局的变量
+			}
+
+			function bar() {
+				fn(); //运行fn
+			}
+			foo();
+			bar(); //2
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
