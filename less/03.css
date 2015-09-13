@@ -1,0 +1,15 @@
+.bordered {
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+}
+#header {
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+  height: 100px;
+  width: 100px;
+}
+/*# sourceMappingURL=03.css.map */

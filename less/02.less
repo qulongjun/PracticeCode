@@ -1,0 +1,27 @@
+//@nice-blue:#5B83AD;
+//@light-blue:@nice-blue+#111;
+//@fnord:red;
+//@fnord:yellow;
+//@var:'fnord';
+//#header{
+//  color: @light-blue;
+//  background-color: @@var;
+//  height: 200px;
+//  width: 100px;
+//  border: 1px solid red;
+//}
+
+
+@var:0;
+.class1{
+    @var:1;
+    .class{
+        @var:2;
+        three:@var;//变量是“按需加载”（lazy loaded）的，因此不必强制在使用之前声明。
+        @var:3;
+    }
+    one:@var;//1
+    width: @a;
+    @a:100%;
+}
+@a:9%;
