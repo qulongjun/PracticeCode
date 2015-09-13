@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function foo(num) {
+				console.log('foo:' + num);
+				this.count++;
+				console.log(this);
+			}
+			foo.count = 0;
+			var i;
+			for (var i = 0; i < 10; i++) {
+				if (i > 5) {
+					foo.call(foo,i);
+				}
+			}
+			console.log(foo.count);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
